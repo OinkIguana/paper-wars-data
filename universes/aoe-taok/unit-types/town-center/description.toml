@@ -1,3 +1,0 @@
-id = "town-center"
-stats = { hp = 100, mov = 0, attack = 0, defense = 500, sight = 0, range = 0 }
-classes = ["building", "train-villager", "trade", "research"]

@@ -1,3 +1,0 @@
-id = "villager"
-stats = { hp = 100, mov = 7, attack = 50, defense = 50, sight = 7, range = 1 }
-classes = ["unit", "build", "move"]

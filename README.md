@@ -2,4 +2,4 @@
 
 # Paper Wars Data
 
-Universe definitions for [Paper Wars]().
+Database schema and models for [Paper Wars]().

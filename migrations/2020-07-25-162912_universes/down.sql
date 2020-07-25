@@ -1,0 +1,10 @@
+DROP TABLE contributors;
+DROP TABLE universe_version_maps;
+DROP TABLE universe_version_archetypes;
+DROP TABLE map_versions;
+DROP TABLE maps;
+DROP TABLE archetype_versions;
+DROP TABLE archetypes;
+DROP TABLE universe_versions;
+DROP TABLE universes;
+DROP TYPE contributor_role;
