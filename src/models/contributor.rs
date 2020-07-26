@@ -8,8 +8,8 @@ use uuid::Uuid;
 #[belongs_to(Universe)]
 #[belongs_to(Account)]
 pub struct Contributor {
-    universe_id: Uuid,
-    account_id: Uuid,
-    role: ContributorRole,
-    created_at: DateTime<Utc>,
+    pub universe_id: Uuid,
+    pub account_id: Uuid,
+    pub role: ContributorRole,
+    pub created_at: DateTime<Utc>,
 }

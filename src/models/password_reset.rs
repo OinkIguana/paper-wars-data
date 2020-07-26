@@ -6,9 +6,9 @@ use uuid::Uuid;
 #[table_name = "password_resets"]
 #[belongs_to(Account)]
 pub struct PasswordReset {
-    id: Uuid,
-    account_id: Uuid,
-    created_at: DateTime<Utc>,
-    valid_until: DateTime<Utc>,
-    consumed: bool,
+    pub id: Uuid,
+    pub account_id: Uuid,
+    pub created_at: DateTime<Utc>,
+    pub valid_until: DateTime<Utc>,
+    pub consumed: bool,
 }

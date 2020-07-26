@@ -8,9 +8,9 @@ use uuid::Uuid;
 #[table_name = "emails"]
 #[belongs_to(Account)]
 pub struct Email {
-    address: CiString,
-    account_id: Uuid,
-    verified_at: Option<DateTime<Utc>>,
-    protected_until: DateTime<Utc>,
-    created_at: DateTime<Utc>,
+    pub address: CiString,
+    pub account_id: Uuid,
+    pub verified_at: Option<DateTime<Utc>>,
+    pub protected_until: DateTime<Utc>,
+    pub created_at: DateTime<Utc>,
 }

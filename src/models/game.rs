@@ -8,12 +8,12 @@ use uuid::Uuid;
 #[belongs_to(Universe)]
 #[belongs_to(Map)]
 pub struct Game {
-    id: Uuid,
-    name: String,
-    universe_id: Uuid,
-    universe_version: i32,
-    map_id: Uuid,
-    map_seed: Vec<u8>,
-    state: Value,
-    created_at: DateTime<Utc>,
+    pub id: Uuid,
+    pub name: String,
+    pub universe_id: Uuid,
+    pub universe_version: i32,
+    pub map_id: Uuid,
+    pub map_seed: Vec<u8>,
+    pub state: Value,
+    pub created_at: DateTime<Utc>,
 }

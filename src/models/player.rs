@@ -8,8 +8,8 @@ use uuid::Uuid;
 #[belongs_to(Game)]
 #[belongs_to(Account)]
 pub struct Player {
-    game_id: Uuid,
-    account_id: Uuid,
-    turn_order: i32,
-    state: Value,
+    pub game_id: Uuid,
+    pub account_id: Uuid,
+    pub turn_order: i32,
+    pub state: Value,
 }

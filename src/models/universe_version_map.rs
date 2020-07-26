@@ -7,8 +7,8 @@ use uuid::Uuid;
 #[belongs_to(Universe)]
 #[belongs_to(Map)]
 pub struct UniverseVersionMap {
-    universe_id: Uuid,
-    universe_version: i32,
-    map_id: Uuid,
-    map_version: i32,
+    pub universe_id: Uuid,
+    pub universe_version: i32,
+    pub map_id: Uuid,
+    pub map_version: i32,
 }

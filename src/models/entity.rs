@@ -8,9 +8,9 @@ use uuid::Uuid;
 #[belongs_to(Game)]
 #[belongs_to(Account)]
 pub struct Entity {
-    id: Uuid,
-    game_id: Uuid,
-    archetype_id: Uuid,
-    account_id: Option<Uuid>,
-    state: Value,
+    pub id: Uuid,
+    pub game_id: Uuid,
+    pub archetype_id: Uuid,
+    pub account_id: Option<Uuid>,
+    pub state: Value,
 }

@@ -7,8 +7,8 @@ use uuid::Uuid;
 #[belongs_to(Universe)]
 #[belongs_to(Archetype)]
 pub struct UniverseVersionArchetype {
-    universe_id: Uuid,
-    universe_version: i32,
-    archetype_id: Uuid,
-    archetype_version: i32,
+    pub universe_id: Uuid,
+    pub universe_version: i32,
+    pub archetype_id: Uuid,
+    pub archetype_version: i32,
 }

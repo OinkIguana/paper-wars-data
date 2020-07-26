@@ -6,7 +6,7 @@ use uuid::Uuid;
 #[table_name = "archetypes"]
 #[belongs_to(Universe)]
 pub struct Archetype {
-    id: Uuid,
-    universe_id: Uuid,
-    created_at: DateTime<Utc>,
+    pub id: Uuid,
+    pub universe_id: Uuid,
+    pub created_at: DateTime<Utc>,
 }

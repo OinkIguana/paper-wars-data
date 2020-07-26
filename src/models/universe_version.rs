@@ -7,8 +7,8 @@ use uuid::Uuid;
 #[primary_key(universe_id, version)]
 #[belongs_to(Universe)]
 pub struct UniverseVersion {
-    universe_id: Uuid,
-    version: i32,
-    created_at: DateTime<Utc>,
-    released_at: DateTime<Utc>,
+    pub universe_id: Uuid,
+    pub version: i32,
+    pub created_at: DateTime<Utc>,
+    pub released_at: DateTime<Utc>,
 }

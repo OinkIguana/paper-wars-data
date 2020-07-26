@@ -6,7 +6,7 @@ use uuid::Uuid;
 #[derive(Clone, Debug, Identifiable, Queryable, QueryableByName)]
 #[table_name = "universes"]
 pub struct Universe {
-    id: Uuid,
-    name: CiString,
-    created_at: DateTime<Utc>,
+    pub id: Uuid,
+    pub name: CiString,
+    pub created_at: DateTime<Utc>,
 }

@@ -7,8 +7,8 @@ use uuid::Uuid;
 #[primary_key(archetype_id, version)]
 #[belongs_to(Archetype)]
 pub struct ArchetypeVersion {
-    archetype_id: Uuid,
-    version: i32,
-    script: String,
-    created_at: DateTime<Utc>,
+    pub archetype_id: Uuid,
+    pub version: i32,
+    pub script: String,
+    pub created_at: DateTime<Utc>,
 }

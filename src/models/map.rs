@@ -6,8 +6,8 @@ use uuid::Uuid;
 #[table_name = "maps"]
 #[belongs_to(Universe)]
 pub struct Map {
-    id: Uuid,
-    universe_id: Uuid,
-    name: String,
-    created_at: DateTime<Utc>,
+    pub id: Uuid,
+    pub universe_id: Uuid,
+    pub name: String,
+    pub created_at: DateTime<Utc>,
 }
