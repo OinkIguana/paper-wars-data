@@ -9,8 +9,20 @@ edition = "2018"
 [dependencies]
 anyhow = "1.0"
 chrono = "0.4"
-diesel = { version = "1.4", default-features = false, features = ["postgres", "r2d2", "uuid", "chrono", "serde_json"] }
-diesel-citext = "0.3"
-diesel-derive-enum = { version = "1.1", features = ["postgres"] }
 serde_json = "1.0"
 uuid = "0.8"
+
+[dependencies.diesel]
+branch = "master"
+default-features = false
+features = ["postgres", "r2d2", "uuid", "chrono", "serde_json"]
+git = "https://github.com/diesel-rs/diesel"
+
+[dependencies.diesel-derive-enum]
+branch = "master"
+features = ["postgres"]
+git = "https://github.com/adwhit/diesel-derive-enum"
+
+[dependencies.diesel-citext]
+branch = "master"
+git = "https://github.com/foxfriends/diesel-citext"
