@@ -7,7 +7,7 @@ mod models;
 mod schema;
 mod types;
 
-pub use database::Database;
+pub use database::{Database, DbConnection};
 pub use models::*;
 pub use schema::*;
 pub use types::*;

@@ -1,7 +1,7 @@
 use diesel::prelude::*;
 use diesel::r2d2::{ConnectionManager, Pool, PooledConnection};
 
-pub type Conn = PooledConnection<ConnectionManager<PgConnection>>;
+pub type DbConnection = PooledConnection<ConnectionManager<PgConnection>>;
 
 /// Handles connections to the database.
 pub struct Database {
@@ -18,7 +18,7 @@ impl Database {
     }
 
     /// Gets a connection to this database.
-    pub fn connection(&self) -> anyhow::Result<Conn> {
+    pub fn connection(&self) -> anyhow::Result<DbConnection> {
         self.pool.get().map_err(Into::into)
     }
 
@@ -27,7 +27,7 @@ impl Database {
     pub fn transaction<T, E, F>(&self, proc: F) -> anyhow::Result<T>
     where
         E: 'static + Sync + Send + std::error::Error,
-        F: Fn(&Conn) -> Result<T, E>,
+        F: Fn(&DbConnection) -> Result<T, E>,
     {
         let conn = self.connection()?;
         conn.transaction(|| proc(&conn).map_err(Into::into))
