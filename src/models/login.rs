@@ -11,6 +11,6 @@ use uuid::Uuid;
 pub struct Login {
     pub account_id: Uuid,
     pub email_address: CiString,
-    pub password: Vec<u8>,
+    pub password: String,
     pub disabled_until: Option<DateTime<Utc>>,
 }
