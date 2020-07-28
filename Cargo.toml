@@ -26,3 +26,8 @@ git = "https://github.com/adwhit/diesel-derive-enum"
 [dependencies.diesel-citext]
 branch = "master"
 git = "https://github.com/foxfriends/diesel-citext"
+
+[dependencies.juniper]
+branch = "master"
+default-features = false
+git = "https://github.com/foxfriends/juniper.git"
