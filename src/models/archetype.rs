@@ -8,5 +8,6 @@ use uuid::Uuid;
 pub struct Archetype {
     pub id: Uuid,
     pub universe_id: Uuid,
+    pub name: String,
     pub created_at: DateTime<Utc>,
 }
