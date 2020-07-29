@@ -88,7 +88,7 @@ table! {
         universe_id -> Uuid,
         universe_version -> Int4,
         map_id -> Uuid,
-        map_seed -> Bpchar,
+        map_seed -> Bit,
         state -> Jsonb,
         created_at -> Timestamptz,
     }

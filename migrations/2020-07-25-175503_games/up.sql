@@ -4,7 +4,7 @@ CREATE TABLE games (
     universe_id      UUID                     NOT NULL REFERENCES universes,
     universe_version INT                      NOT NULL,
     map_id           UUID                     NOT NULL REFERENCES maps,
-    map_seed         CHAR(64)                 NOT NULL,
+    map_seed         BIT(256)                 NOT NULL,
     state            JSONB                    NOT NULL DEFAULT '{}'::JSONB,
     created_at       TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
     FOREIGN KEY (universe_id, universe_version) REFERENCES universe_versions (universe_id, version)
