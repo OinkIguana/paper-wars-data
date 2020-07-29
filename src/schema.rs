@@ -154,8 +154,8 @@ table! {
 
     players (game_id, account_id) {
         game_id -> Uuid,
-        turn_order -> Int4,
         account_id -> Uuid,
+        turn_order -> Int4,
         state -> Jsonb,
     }
 }
