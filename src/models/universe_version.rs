@@ -10,5 +10,5 @@ pub struct UniverseVersion {
     pub universe_id: Uuid,
     pub version: i32,
     pub created_at: DateTime<Utc>,
-    pub released_at: DateTime<Utc>,
+    pub released_at: Option<DateTime<Utc>>,
 }
