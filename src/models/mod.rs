@@ -15,7 +15,7 @@ mod universe_version;
 mod universe_version_archetype;
 mod universe_version_map;
 
-pub use account::Account;
+pub use account::{Account, AccountSearch};
 pub use archetype::Archetype;
 pub use archetype_version::ArchetypeVersion;
 pub use contributor::Contributor;
@@ -27,7 +27,7 @@ pub use map::Map;
 pub use map_version::MapVersion;
 pub use password_reset::PasswordReset;
 pub use player::Player;
-pub use universe::Universe;
+pub use universe::{Universe, UniverseSearch};
 pub use universe_version::UniverseVersion;
 pub use universe_version_archetype::UniverseVersionArchetype;
 pub use universe_version_map::UniverseVersionMap;

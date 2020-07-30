@@ -6,8 +6,10 @@ mod models;
 #[allow(unused_imports)]
 mod schema;
 mod types;
+mod traits;
 
 pub use database::{Database, DbConnection};
 pub use models::*;
 pub use schema::*;
 pub use types::*;
+pub use traits::*;
