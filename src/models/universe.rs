@@ -12,7 +12,7 @@ pub struct Universe {
     pub created_at: DateTime<Utc>,
 }
 
-#[derive(juniper::GraphQLInputObject)]
+#[derive(Default, juniper::GraphQLInputObject)]
 pub struct UniverseSearch {
     pub name: Option<String>,
     pub limit: Option<i32>,
@@ -29,9 +29,7 @@ impl<'a> TryAsQuery<'a, Universe> for UniverseSearch {
             query =
                 query.filter(universes::name.like(CiString::from(format!("%{}%", search_name))));
         }
-        if let Some(limit) = self.limit {
-            query = query.limit(limit as i64);
-        }
+        query = query.limit(self.limit.unwrap_or(25) as i64);
         if let Some(offset) = &self.cursor {
             query = query.offset(offset.parse()?);
         }

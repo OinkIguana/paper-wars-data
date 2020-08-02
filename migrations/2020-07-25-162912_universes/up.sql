@@ -101,7 +101,7 @@ COMMENT ON COLUMN universe_version_maps.universe_version IS 'The version of the 
 COMMENT ON COLUMN universe_version_maps.map_id           IS 'The ID of the map in the universe.';
 COMMENT ON COLUMN universe_version_maps.map_version      IS 'The version of the map that is part of this universe version.';
 
-CREATE TYPE contributor_role AS ENUM ('owner', 'contributor');
+CREATE TYPE contributor_role AS ENUM ('owner', 'contributor', 'pending', 'declined');
 COMMENT ON TYPE contributor_role IS 'The relationship between a universe and an account.';
 
 CREATE TABLE contributors (

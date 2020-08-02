@@ -13,7 +13,7 @@ pub struct Account {
     pub created_at: DateTime<Utc>,
 }
 
-#[derive(juniper::GraphQLInputObject)]
+#[derive(Default, juniper::GraphQLInputObject)]
 pub struct AccountSearch {
     name: Option<String>,
     email: Option<String>,
@@ -37,9 +37,7 @@ impl<'a> TryAsQuery<'a, Account> for AccountSearch {
                     .filter(emails::account_id.eq(accounts::id)),
             ));
         }
-        if let Some(limit) = self.limit {
-            query = query.limit(limit as i64);
-        }
+        query = query.limit(self.limit.unwrap_or(25) as i64);
         if let Some(offset) = &self.cursor {
             query = query.offset(offset.parse()?);
         }

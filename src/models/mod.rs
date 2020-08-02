@@ -18,7 +18,7 @@ mod universe_version_map;
 pub use account::{Account, AccountSearch};
 pub use archetype::Archetype;
 pub use archetype_version::ArchetypeVersion;
-pub use contributor::Contributor;
+pub use contributor::{Contributor, ContributorSearch};
 pub use email::Email;
 pub use entity::Entity;
 pub use game::Game;

@@ -7,4 +7,6 @@ use juniper::GraphQLEnum;
 pub enum ContributorRole {
     Owner,
     Contributor,
+    Pending,
+    Declined,
 }
