@@ -11,13 +11,12 @@ pub enum ContributorRole {
     Declined,
 }
 
-impl ContributorRole {
-    /// Whether the account is allowed to contribute to this universe, or if this
-    /// relationship does not permit that.
-    pub fn can_contribute(self) -> bool {
-        match self {
-            ContributorRole::Owner | ContributorRole::Contributor => true,
-            _ => false,
-        }
-    }
+#[derive(Copy, Clone, Eq, PartialEq, Debug, DbEnum, GraphQLEnum)]
+#[DieselType = "Player_engagement"]
+#[PgType = "player_engagement"]
+pub enum PlayerEngagement {
+    Host,
+    Player,
+    Pending,
+    Declined,
 }

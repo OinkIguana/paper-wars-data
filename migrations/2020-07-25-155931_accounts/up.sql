@@ -38,9 +38,8 @@ BEGIN
 END;
 $$;
 
-CREATE TRIGGER emails_remove_expired 
-    BEFORE INSERT 
-    ON emails
+CREATE TRIGGER emails_remove_expired
+    BEFORE INSERT ON emails
     FOR EACH ROW
     EXECUTE PROCEDURE emails_remove_expired_procedure();
 COMMENT ON TRIGGER emails_remove_expired ON emails IS 'Removes expired emails (not-verified or protected) when a new insertion would be replacing that email.';

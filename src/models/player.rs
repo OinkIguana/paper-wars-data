@@ -1,4 +1,4 @@
-use crate::{players, Account, Game};
+use crate::{players, Account, Game, PlayerEngagement};
 use serde_json::Value;
 use uuid::Uuid;
 
@@ -11,5 +11,6 @@ pub struct Player {
     pub game_id: Uuid,
     pub account_id: Uuid,
     pub turn_order: i32,
+    pub engagement: PlayerEngagement,
     pub state: Value,
 }

@@ -156,6 +156,7 @@ table! {
         game_id -> Uuid,
         account_id -> Uuid,
         turn_order -> Int4,
+        engagement -> Player_engagement,
         state -> Jsonb,
     }
 }
