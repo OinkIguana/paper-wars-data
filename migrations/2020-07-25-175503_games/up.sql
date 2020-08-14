@@ -58,7 +58,9 @@ COMMENT ON TRIGGER delete_player_games ON accounts IS 'Delete the games where a 
 CREATE FUNCTION delete_declined_games_procedure() RETURNS TRIGGER AS $$
 BEGIN
     DELETE FROM games WHERE NOT EXISTS (
-        SELECT 1 FROM players WHERE engagement <> 'declined'
+        SELECT 1 FROM players 
+            WHERE engagement = 'host'
+            OR engagement = 'player'
     );
     RETURN OLD;
 END;
