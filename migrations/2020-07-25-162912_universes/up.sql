@@ -91,8 +91,8 @@ CREATE TABLE universe_version_maps (
     universe_version  INT  NOT NULL,
     map_id            UUID NOT NULL REFERENCES maps,
     map_version       INT  NOT NULL,
-    FOREIGN KEY (universe_id, universe_version)   REFERENCES universe_versions ON DELETE CASCADE,
-    FOREIGN KEY (map_id, map_version) REFERENCES map_versions ON DELETE CASCADE,
+    FOREIGN KEY (universe_id, universe_version) REFERENCES universe_versions ON DELETE CASCADE,
+    FOREIGN KEY (map_id, map_version)           REFERENCES map_versions ON DELETE CASCADE,
     PRIMARY KEY (universe_id, universe_version, map_id)
 );
 COMMENT ON TABLE universe_version_maps                   IS 'Lists the maps and the versions of those maps that exist within each version of the universe.';

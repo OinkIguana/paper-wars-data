@@ -13,9 +13,5 @@ pub trait TryAsQuery<'a, U> {
 #[async_trait::async_trait]
 pub trait Searchable: Sized {
     type Search: for<'a> TryAsQuery<'a, Self>;
-    fn cursor(
-        &self,
-        search: &Self::Search,
-        index: usize,
-    ) -> String;
+    fn cursor(&self, search: &Self::Search, index: usize) -> String;
 }
