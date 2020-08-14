@@ -19,11 +19,12 @@ CREATE TABLE emails (
     created_at      TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
     UNIQUE (address, account_id)
 );
-COMMENT ON TABLE emails              IS 'Emails which are associated with accounts. Accounts may have multiple associated emails, any of which may have been verified.';
-COMMENT ON COLUMN emails.address     IS 'The actual email address.';
-COMMENT ON COLUMN emails.account_id  IS 'The account which this email is associated with.';
-COMMENT ON COLUMN emails.verified_at IS 'The date and time at which the email was verified by the user. A NULL value indicates that the email has not yet been verified.';
-COMMENT ON COLUMN emails.created_at  IS 'The date and time at which this email was listed.';
+COMMENT ON TABLE emails                  IS 'Emails which are associated with accounts. Accounts may have multiple associated emails, any of which may have been verified.';
+COMMENT ON COLUMN emails.address         IS 'The actual email address.';
+COMMENT ON COLUMN emails.account_id      IS 'The account which this email is associated with.';
+COMMENT ON COLUMN emails.verified_at     IS 'The date and time at which the email was verified by the user. A NULL value indicates that the email has not yet been verified.';
+COMMENT ON COLUMN emails.protected_until IS 'The date and time at which this email, if still unverified, goes back to being claimable.';
+COMMENT ON COLUMN emails.created_at      IS 'The date and time at which this email was listed.';
 
 CREATE FUNCTION emails_remove_expired_procedure() RETURNS TRIGGER
     LANGUAGE plpgsql
