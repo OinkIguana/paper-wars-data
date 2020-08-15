@@ -3,9 +3,7 @@ use crate::{
 };
 use chrono::{DateTime, Utc};
 use diesel::dsl::*;
-use diesel::pg::Pg;
 use diesel::prelude::*;
-use diesel::sql_types::Bool;
 use serde_json::Value;
 use uuid::Uuid;
 
