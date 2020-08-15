@@ -20,3 +20,9 @@ pub enum PlayerEngagement {
     Pending,
     Declined,
 }
+
+impl PlayerEngagement {
+    pub fn any() -> Vec<Self> {
+        vec![Self::Host, Self::Player, Self::Pending, Self::Declined]
+    }
+}
