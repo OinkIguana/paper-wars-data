@@ -2,3 +2,4 @@
 /universes
 /target
 Cargo.lock
+.env

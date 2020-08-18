@@ -1,7 +1,7 @@
 [Paper Wars]: https://github.com/foxfriends/paper-wars
 [Postgres]: https://www.postgresql.org/
 
-# Paper Wars Data
+# Paper Wars Database
 
 Database schema and models for [Paper Wars][].
 
@@ -22,7 +22,8 @@ Database schema and models for [Paper Wars][].
     createuser paper-wars-admin -lPes -g paper-wars
     createuser paper-wars-server -lPe -g paper-wars
     ```
-5.  Put the database credentials you just created into the `.env` file:
+5.  Copy the `.env.sample` file to `.env` and set the credentials to the ones created in the 
+    previous step.
 
     ```sh
     DATABASE_URL=postgres://paper-wars-admin:<password>@localhost/paper-wars
