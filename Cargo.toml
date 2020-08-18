@@ -19,11 +19,6 @@ default-features = false
 features = ["postgres", "r2d2", "uuid", "chrono", "serde_json"]
 git = "https://github.com/diesel-rs/diesel"
 
-[dependencies.diesel-derive-enum]
-branch = "master"
-features = ["postgres"]
-git = "https://github.com/foxfriends/diesel-derive-enum"
-
 [dependencies.diesel-citext]
 git = "https://github.com/foxfriends/diesel-citext"
 branch = "master"
